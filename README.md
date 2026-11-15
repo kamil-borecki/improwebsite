@@ -6,7 +6,7 @@ Strona improwizatorki i trenerki impro. Czysty HTML, CSS i odrobina JS, bez budo
 
 Treści są przykładowe. W `index.html`:
 
-- **Imię i nazwisko**: nagłówek w sekcji otwierającej, `<title>`, stopka.
+- **Imię i nazwisko** (teraz przykładowe „Kasia Kowalska”): nagłówek w sekcji otwierającej, `<title>`, stopka.
 - **Warsztaty** (`<ul class="workshops">`): nazwy, terminy, ceny, liczba miejsc.
 - **Spektakle** (`<ol id="shows">`): każdy wiersz ma `data-date="RRRR-MM-DD"`. Po tej dacie wiersz sam znika, a gdy nie zostanie żaden, pojawia się komunikat o nowych terminach. Linki „Bilety” podmień na adresy sprzedaży.
 - **Bio**: cały tekst.

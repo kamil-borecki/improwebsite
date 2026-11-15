@@ -117,7 +117,7 @@ a { color: inherit; }
   text-transform: uppercase;
   line-height: .86;
   letter-spacing: -.035em;
-  font-size: clamp(3rem, 15.2vw, 9.4rem);
+  font-size: clamp(2.6rem, 13.2vw, 8.5rem);
 }
 .name__row {
   display: flex;
@@ -135,7 +135,7 @@ a { color: inherit; }
   color: var(--ink-soft);
 }
 @media (max-width: 40rem) {
-  .name { display: flex; flex-direction: column; font-size: 17.5vw; }
+  .name { display: flex; flex-direction: column; font-size: 13.5vw; }
   .name__row { display: contents; }
   .name__roles { order: 3; margin-top: 1.25rem; font-size: 1.25rem; }
 }
