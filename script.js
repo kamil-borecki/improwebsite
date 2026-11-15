@@ -26,6 +26,38 @@
     probe.src = photo.getAttribute('src');
   }
 
+  // Sekcje wchodzą przy przewijaniu: tytuł zza maski, potem kolejne elementy kaskadą.
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+
+    document.querySelectorAll('main .band').forEach(function (band) {
+      var title = band.querySelector('.title');
+      if (title) {
+        var inner = document.createElement('span');
+        while (title.firstChild) inner.appendChild(title.firstChild);
+        title.appendChild(inner);
+        io.observe(title);
+      }
+      // Wiersze list wchodzą osobno, każdy gdy sam pojawi się w oknie.
+      var items = band.querySelectorAll('.lead, .workshop, .show, .shows__empty, .bio__text, .contact__mail');
+      var i = 0;
+      items.forEach(function (el) {
+        el.classList.add('reveal');
+        el.style.setProperty('--i', Math.min(i, 3));
+        i += 1;
+        io.observe(el);
+      });
+    });
+  }
+
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('to-top').addEventListener('click', function (e) {
     e.preventDefault();

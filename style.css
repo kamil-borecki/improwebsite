@@ -381,6 +381,28 @@ a { color: inherit; }
     to   { transform: none; }
   }
 }
+/* ---------- Ruch: sekcje wchodzą przy przewijaniu ----------
+   Tytuł wyjeżdża zza maski tak samo jak nazwisko w hero, reszta sekcji dochodzi krótką kaskadą.
+   Działa tylko z JS (klasa .js na <html>) i tylko bez prefers-reduced-motion. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .title { overflow: hidden; padding-block: .06em; margin-block: -.06em; }
+  .js .title > span {
+    display: block;
+    transform: translateY(110%);
+    transition: transform .7s cubic-bezier(.2, .8, .2, 1);
+  }
+  .js .title.is-in > span { transform: none; }
+
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition: opacity .5s ease-out, transform .6s cubic-bezier(.2, .8, .2, 1);
+    transition-delay: calc(var(--i, 0) * 80ms);
+  }
+  .js .reveal.is-in { opacity: 1; transform: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn, .arrow, .show__link { transition: none; }
