@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Improwizatorka i trenerka impro</title>
+  <meta name="description" content="Spektakle improwizowane i warsztaty impro. Sprawdź aktualne warsztaty i terminy spektakli.">
+  <meta name="theme-color" content="#F0A93E">
+  <meta property="og:title" content="Improwizatorka i trenerka impro">
+  <meta property="og:description" content="Aktualne warsztaty impro i harmonogram spektakli.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F0A93E'/%3E%3Ctext x='16' y='24' font-family='Arial Black,Arial' font-weight='900' font-size='22' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#warsztaty">Przejdź do treści</a>
+
+  <!-- WERSJA ROBOCZA: usuń ten pasek, gdy podmienisz przykładowe treści na prawdziwe -->
+  <p class="draft">Wersja robocza. Imię, terminy, miejsca, ceny i bio są przykładowe.</p>
+
+  <header class="hero">
+    <nav class="nav" aria-label="Główna">
+      <a href="#warsztaty">Warsztaty</a>
+      <a href="#spektakle">Spektakle</a>
+      <a href="#bio">Bio</a>
+      <a class="nav__cta" href="#kontakt">Napisz do mnie</a>
+    </nav>
+
+    <div class="hero__inner">
+      <h1 class="name">
+        <span class="name__row">
+          <span class="name__big">Imię</span>
+          <span class="name__roles">improwizatorka<br> trenerka impro</span>
+        </span>
+        <span class="name__row"><span class="name__big">Nazwisko</span></span>
+      </h1>
+
+      <div class="hero__actions">
+        <a class="btn" href="#warsztaty">Warsztaty <span class="arrow" aria-hidden="true"></span></a>
+        <a class="btn" href="#spektakle">Spektakle <span class="arrow" aria-hidden="true"></span></a>
+      </div>
+
+      <!-- Zdjęcie: wrzuć wycięty portret (PNG z przezroczystym tłem) jako assets/portret.png.
+           Dopóki pliku nie ma, hero zostaje czysto typograficzne. -->
+      <img class="hero__photo" src="assets/portret.png" alt="Portret na scenie" hidden>
+    </div>
+  </header>
+
+  <main>
+    <section class="band band--dark" id="warsztaty">
+      <div class="wrap">
+        <h2 class="title">Warsztaty</h2>
+        <p class="lead">Uczę impro od pierwszego „tak, i…” po pracę nad długą formą. Grupy są małe, więc każdy dużo gra.</p>
+
+        <ul class="workshops">
+          <li class="workshop">
+            <div class="workshop__head">
+              <h3>Impro od zera</h3>
+              <p class="workshop__when">6–7 grudnia 2026, sobota i niedziela, 10:00–16:00</p>
+            </div>
+            <div class="workshop__body">
+              <p>Weekend dla osób, które nigdy nie stały na scenie. Ćwiczymy słuchanie, przyjmowanie propozycji partnera i budowanie sceny z niczego. Nie trzeba być zabawnym ani niczego przygotowywać.</p>
+              <p class="workshop__facts">12 miejsc · 12 godzin · 390 zł</p>
+              <a class="btn btn--light" href="mailto:kontakt@example.com?subject=Zapis%3A%20Impro%20od%20zera">Zapisz się <span class="arrow" aria-hidden="true"></span></a>
+            </div>
+          </li>
+
+          <li class="workshop">
+            <div class="workshop__head">
+              <h3>Postać w pięć sekund</h3>
+              <p class="workshop__when">16 stycznia 2027, sobota, 11:00–17:00</p>
+            </div>
+            <div class="workshop__body">
+              <p>Dla osób, które już grają. Szukamy postaci przez ciało, głos i punkt widzenia, a potem sprawdzamy, czy da się ją utrzymać przez całą scenę.</p>
+              <p class="workshop__facts">10 miejsc · 6 godzin · 220 zł</p>
+              <a class="btn btn--light" href="mailto:kontakt@example.com?subject=Zapis%3A%20Posta%C4%87%20w%20pi%C4%99%C4%87%20sekund">Zapisz się <span class="arrow" aria-hidden="true"></span></a>
+            </div>
+          </li>
+
+          <li class="workshop">
+            <div class="workshop__head">
+              <h3>Impro dla zespołów</h3>
+              <p class="workshop__when">Termin ustalamy razem</p>
+            </div>
+            <div class="workshop__body">
+              <p>Warsztat dla firm, szkół i grup, które chcą popracować nad współpracą i mówieniem przed ludźmi. Program układam po rozmowie o tym, czego zespół potrzebuje.</p>
+              <p class="workshop__facts">Od 8 do 20 osób · 3 lub 6 godzin</p>
+              <a class="btn btn--light" href="mailto:kontakt@example.com?subject=Warsztat%20dla%20zespo%C5%82u">Zapytaj o termin <span class="arrow" aria-hidden="true"></span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" id="spektakle">
+      <div class="wrap">
+        <h2 class="title">Spektakle</h2>
+        <p class="lead">Każdy spektakl powstaje na żywo z podpowiedzi widowni i nigdy się nie powtórzy.</p>
+
+        <!-- Każdy wiersz ma data-date (RRRR-MM-DD). Po tym dniu wiersz sam znika ze strony. -->
+        <ol class="shows" id="shows">
+          <li class="show" data-date="2026-11-27">
+            <time class="show__date" datetime="2026-11-27T19:30"><b>27</b> listopada, piątek</time>
+            <div class="show__what">
+              <h3>Wieczór krótkich form</h3>
+              <p>19:30 · miejsce do potwierdzenia</p>
+            </div>
+            <a class="show__link" href="#kontakt">Bilety</a>
+          </li>
+          <li class="show" data-date="2026-12-12">
+            <time class="show__date" datetime="2026-12-12T20:00"><b>12</b> grudnia, sobota</time>
+            <div class="show__what">
+              <h3>Długa forma</h3>
+              <p>20:00 · miejsce do potwierdzenia</p>
+            </div>
+            <a class="show__link" href="#kontakt">Bilety</a>
+          </li>
+          <li class="show" data-date="2026-12-19">
+            <time class="show__date" datetime="2026-12-19T18:00"><b>19</b> grudnia, sobota</time>
+            <div class="show__what">
+              <h3>Pokaz po warsztatach „Impro od zera”</h3>
+              <p>18:00 · wstęp wolny · miejsce do potwierdzenia</p>
+            </div>
+            <a class="show__link" href="#kontakt">Zarezerwuj</a>
+          </li>
+          <li class="show" data-date="2027-01-22">
+            <time class="show__date" datetime="2027-01-22T19:30"><b>22</b> stycznia, piątek</time>
+            <div class="show__what">
+              <h3>Wieczór krótkich form</h3>
+              <p>19:30 · miejsce do potwierdzenia</p>
+            </div>
+            <a class="show__link" href="#kontakt">Bilety</a>
+          </li>
+        </ol>
+        <p class="shows__empty" id="shows-empty" hidden>Nowe terminy pojawią się wkrótce. Napisz, jeśli chcesz dostać wiadomość, gdy je ogłoszę.</p>
+      </div>
+    </section>
+
+    <section class="band band--dark" id="bio">
+      <div class="wrap bio">
+        <h2 class="title">Bio</h2>
+        <div class="bio__text">
+          <!-- TEKST PRZYKŁADOWY: podmień na prawdziwe bio -->
+          <p class="bio__first">Gram impro i uczę go innych.</p>
+          <p>Na scenie najbardziej lubię moment, w którym nikt, łącznie ze mną, nie wie, co wydarzy się za chwilę. Gram krótkie i długie formy, solo i z grupą.</p>
+          <p>Jako trenerka pracuję z osobami początkującymi, z grupami, które chcą grać lepiej, i z zespołami w firmach. Na zajęciach więcej się gra, niż słucha teorii, a błędy traktujemy jak materiał do sceny.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="kontakt">
+      <div class="wrap contact">
+        <h2 class="title">Kontakt</h2>
+        <p class="lead">Chcesz zapisać się na warsztat, zamówić spektakl albo szkolenie dla zespołu? Napisz, odpowiem w ciągu kilku dni.</p>
+        <a class="contact__mail" href="mailto:kontakt@example.com">kontakt@example.com</a>
+        <ul class="contact__links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Imię Nazwisko</p>
+      <a href="#top" id="to-top">Do góry</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
