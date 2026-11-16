@@ -17,6 +17,7 @@ Potem wystarczy edytować arkusz. Zmiany pojawiają się na stronie zwykle w ci�
 Zasady:
 
 - Nie zmieniaj nazw kolumn ani kluczy w karcie `teksty`.
+- Kolumna `szczegóły` w karcie `spektakle` to miejsce na cenę biletów i inne dopiski; pojawia się pod godziną i miejscem.
 - Spektakle układają się same według daty i znikają po swoim dniu. Warsztaty idą w kolejności wierszy; kolumna `pokazuj do` chowa warsztat po podanej dacie.
 - `tak` w kolumnie `ukryj` chowa wiersz bez usuwania.
 - Gdy arkusz jest niedostępny, strona pokazuje ostatnią wczytaną wersję, a przy pierwszej wizycie treść z `index.html`.

@@ -164,6 +164,8 @@
     what.appendChild(el('h3', null, item['tytuł'] || item['tytul'] || ''));
     var meta = [hour, item['miejsce']].filter(Boolean).join(', ');
     if (meta) what.appendChild(el('p', null, meta));
+    var facts = item['szczegóły'] || item['szczegoly'];
+    if (facts) what.appendChild(el('p', 'show__facts', facts));
     li.appendChild(what);
 
     var href = safeLink(item['link']) || '#kontakt';

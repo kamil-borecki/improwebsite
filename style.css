@@ -292,6 +292,7 @@ a { color: inherit; }
   line-height: 1.2;
 }
 .show__what p { color: var(--ink-soft); }
+.show__what .show__facts { color: var(--black); font-weight: 500; white-space: pre-line; }
 
 .show__link {
   background: var(--black);
@@ -310,6 +311,12 @@ a { color: inherit; }
   max-width: 34rem;
   font-size: 1.25rem;
   font-weight: 500;
+}
+
+/* Na telefonie przycisk schodzi pod opis, żeby nie ściskał tekstu. */
+@media (max-width: 47.99rem) {
+  .show { grid-template-columns: 1fr; }
+  .show__link { justify-self: start; margin-top: .5rem; }
 }
 
 @media (min-width: 48rem) {
