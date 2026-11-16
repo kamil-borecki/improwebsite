@@ -244,7 +244,7 @@ a { color: inherit; }
   color: var(--amber);
   font-weight: 500;
 }
-.workshop__body p { max-width: 36rem; }
+.workshop__body p { max-width: 36rem; white-space: pre-line; }
 .workshop__facts {
   margin-top: 1rem;
   color: var(--amber-soft);
